@@ -1,0 +1,60 @@
+2026-05-25T22:05:16.452+07:00  INFO 20588 --- [th3] [restartedMain] org.example.th3.Th3Application           : Starting Th3Application using Java 17.0.12 with PID 20588 (C:\Users\chung\OneDrive\Desktop\211_java_Web_Service\session10\th3\build\classes\java\main started by chung in C:\Users\chung\OneDrive\Desktop\211_java_Web_Service\session10\th3)
+2026-05-25T22:05:16.454+07:00  INFO 20588 --- [th3] [restartedMain] org.example.th3.Th3Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-25T22:05:16.502+07:00  INFO 20588 --- [th3] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-25T22:05:16.503+07:00  INFO 20588 --- [th3] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-25T22:05:17.703+07:00  INFO 20588 --- [th3] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-25T22:05:17.810+07:00  INFO 20588 --- [th3] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 2 JPA repository interfaces.
+2026-05-25T22:05:18.568+07:00  INFO 20588 --- [th3] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-05-25T22:05:18.583+07:00  INFO 20588 --- [th3] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25T22:05:18.583+07:00  INFO 20588 --- [th3] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2026-05-25T22:05:18.634+07:00  INFO 20588 --- [th3] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-25T22:05:18.634+07:00  INFO 20588 --- [th3] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2130 ms
+2026-05-25T22:05:18.819+07:00  INFO 20588 --- [th3] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-25T22:05:18.897+07:00  INFO 20588 --- [th3] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2026-05-25T22:05:18.939+07:00  INFO 20588 --- [th3] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-25T22:05:19.313+07:00  INFO 20588 --- [th3] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-25T22:05:19.346+07:00  INFO 20588 --- [th3] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-25T22:05:19.584+07:00  INFO 20588 --- [th3] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79bd9679
+2026-05-25T22:05:19.587+07:00  INFO 20588 --- [th3] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-25T22:05:19.691+07:00  INFO 20588 --- [th3] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-25T22:05:20.797+07:00  INFO 20588 --- [th3] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-25T22:05:20.863+07:00 DEBUG 20588 --- [th3] [restartedMain] org.hibernate.SQL                        : 
+    create table products (
+        id bigint not null auto_increment,
+        name varchar(255),
+        quantity bigint,
+        sku varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+2026-05-25T22:05:20.891+07:00 DEBUG 20588 --- [th3] [restartedMain] org.hibernate.SQL                        : 
+    create table warehouse_keepers (
+        id bigint not null auto_increment,
+        full_name varchar(255),
+        staff_code varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+2026-05-25T22:05:20.923+07:00 DEBUG 20588 --- [th3] [restartedMain] org.hibernate.SQL                        : 
+    alter table products 
+       drop index UKfhmd06dsmj6k0n90swsh8ie9g
+2026-05-25T22:05:20.932+07:00 DEBUG 20588 --- [th3] [restartedMain] org.hibernate.SQL                        : 
+    alter table products 
+       add constraint UKfhmd06dsmj6k0n90swsh8ie9g unique (sku)
+2026-05-25T22:05:20.950+07:00 DEBUG 20588 --- [th3] [restartedMain] org.hibernate.SQL                        : 
+    alter table warehouse_keepers 
+       drop index UKfjo5m8osl6q80lw5uxwu4h8k9
+2026-05-25T22:05:20.954+07:00 DEBUG 20588 --- [th3] [restartedMain] org.hibernate.SQL                        : 
+    alter table warehouse_keepers 
+       add constraint UKfjo5m8osl6q80lw5uxwu4h8k9 unique (staff_code)
+2026-05-25T22:05:20.981+07:00  INFO 20588 --- [th3] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-25T22:05:21.352+07:00  INFO 20588 --- [th3] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-25T22:05:21.983+07:00  WARN 20588 --- [th3] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-25T22:05:22.402+07:00  INFO 20588 --- [th3] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-25T22:05:22.442+07:00  INFO 20588 --- [th3] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-05-25T22:05:22.449+07:00  INFO 20588 --- [th3] [restartedMain] org.example.th3.Th3Application           : Started Th3Application in 6.561 seconds (process running for 7.775)
